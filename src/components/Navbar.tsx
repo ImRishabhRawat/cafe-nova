@@ -9,18 +9,20 @@ const Navbar = () => {
             scrollTrigger: {
                 trigger: 'nav',
                 start: 'bottom top',
-                markers: false,
+                scrub: true,
             }
         });
 
-        navTween.fromTo('nav', { backgroundColor: 'transparent' },
-            {
-                backgroundColor: '#000050',
-                // The error occurs because 'backgroundFilter' is not a valid CSS property.
-                // The correct property is 'backdropFilter', and its value should be a string.
-                backdropFilter: 'blur(10px)',
-                duration: 1, ease: 'power1.inOut'
-            })
+        navTween.fromTo(
+					"nav",
+					{ backgroundColor: "transparent" },
+					{
+						backgroundColor: "#00000050",
+						backdropFilter: "blur(10px)",
+						duration: 1,
+						ease: "power1.inOut",
+					}
+				);
     })
   return (
 		<nav>

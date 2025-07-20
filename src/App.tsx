@@ -2,6 +2,9 @@ import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Cocktails from "./components/Cocktails";
+import About from "./components/About";
+import Art from "./components/Art";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -10,9 +13,9 @@ const App = () => {
 	  <main>
 		  <Navbar />
 		  <Hero />
-		  <section id="about" className="w-full h-screen bg-red-500">
-			<h2>About</h2>
-		  </section>
+		  <Cocktails />
+		  <About />
+		  <Art/>
 		</main>
 	);
 }
